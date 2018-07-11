@@ -23,110 +23,115 @@
       <link rel="stylesheet" href="resources/style.css" type="text/css">
   </head>
   <body>
-    <div class="container">
+    <div class="frame container-fluid">
       <h1 id="title">Survey Form</h1>
-      <p id="description">Please take this survey to help us improve our service</p>
-      <form id="survey-form">
-        <div class="row">
-          <label class="col-sm-4" id="name-label" for="name"> * Name: </label>
-          <input class="col-sm-4" type="text" id="name" name="name" maxlength="300" placeholder="Enter your name" required />
-        </div>
-
-        <div class="row">
-          <label class="col-sm-4" id="email-label" for="email"> * Email: </label>
-          <input class="col-sm-4" type="email" id="email" name="email" maxlength="300" placeholder="Enter your email" required />
-          <!-- add email validation -->
-        </div>
-
-        <div class="row">
-          <label class="col-sm-4" id="number-label" for="number"> Age: </label>
-          <input class="col-sm-4" type="number" id="number" name="age"
-           min="1" max="150"  />
-          <!-- add a way to dissalow improbable age ranges -->
-        </div>
-
-        <div class="row">
-          <label class="col-sm-4" id="dropdown-label" for="dropdown">Which option best describes your current role?: </label>
-          <select class="col-sm-4" type="number" id="dropdown"  name="dropdown"/>
-            <option value="student">Student</option>
-            <option value="full-time-job">Full Time Job</option>
-            <option value="full-time-learner">Full Time Learner</option>
-            <option value="prefer-not-to-say">Prefer not to say</option>
-            <option value="other">Other</option>
-        </select>
-        </div>
-
-        <div class="row">
-          <p class="col-sm-4">How likely is that you would recommend freeCodeCamp to a friend?</p>
-          <input type="radio" id="recommend1"
-                 name="recommend" value="Definitely">
-          <label for="recommend1">Definitely</label>
-          <input type="radio" id="recommend2"
-                 name="recommend" value="Maybe">
-          <label for="recommend2">Maybe</label>
-          <input type="radio" id="recommend3"
-                 name="recommend" value="Not Sure">
-          <label for="recommend13">Not Sure</label>
-        </div>
-
-          <fieldset class="row">
-            <p class="col-sm-4">Things that should be improved in the future (Check all that apply):</p>
-            <div class="col-sm-4">
-              <div>
-                <input type="checkbox" id="front-end-projects" name="improve" value="front-end-projects">
-                <label for="front-end-projects">Front-end Projects</label>
-              </div>
-              <div>
-                <input type="checkbox" id="back-end-projects" name="improve" value="back-end-projects">
-                <label for="back-end-projects">Back-end Projects</label>
-              </div>
-              <div>
-                <input type="checkbox" id="data-visualization" name="improve" value="data-visualization">
-                <label for="data-visualization">Data Visualization</label>
-              </div>
-              <div>
-                <input type="checkbox" id="challenges" name="improve" value="challenges">
-                <label for="Challenges">Challenges</label>
-              </div>
-              <div>
-                <input type="checkbox" id="open-source-community" name="improve" value="open-source-community">
-                <label for="open-source-community">Open Source Community</label>
-              </div>
-              <div>
-                <input type="checkbox" id="videos" name="improve" value="videos">
-                <label for="videos">Videos</label>
-              </div>
-              <div>
-                <input type="checkbox" id="city-meetups" name="improve" value="city-meetups">
-                <label for="city-meetups">City Meetups</label>
-              </div>
-              <div>
-                <input type="checkbox" id="wiki" name="improve" value="wiki">
-                <label for="wiki">Wiki</label>
-              </div>
-              <div>
-                <input type="checkbox" id="forum" name="improve" value="forum">
-                <label for="forum">Forum</label>
-              </div>
-              <div>
-                <input type="checkbox" id="additional-courses" name="improve" value="additional-courses">
-                <label for="additional-courses">Additional Courses</label>
-              </div>
-            </div>
-          </fieldset>
+      <div class="main container">
+        <p class="text-center" id="description">Let us know how we can improve Free Code Camp</p>
+        <form id="survey-form">
           <div class="row">
-            <label class="col-sm-4" for="comments">Any Comments or Suggestions?</label>
-            <textarea class="col-sm-4" id="comments" name="comments">
-            </textarea>
+            <label class="col-sm-4" id="name-label" for="name"> * Name: </label>
+            <input class="col-sm-4" type="text" id="name" name="name" maxlength="300" placeholder="Enter your name" required />
           </div>
 
-            <input class="btn btn-primary" id="submit" type="submit" class="submit" value="Submit" />
-        </div>
-      </form>
+          <div class="row">
+            <label class="col-sm-4" id="email-label" for="email"> * Email: </label>
+            <input class="col-sm-4" type="email" id="email" name="email" maxlength="300" placeholder="Enter your email" required />
+            <!-- add email validation -->
+          </div>
+
+          <div class="row">
+            <label class="col-sm-4" id="number-label" for="number"> * Age: </label>
+            <input class="col-sm-4" type="number" id="number" name="age" required
+             min="1" max="150" placeholder="Enter your age" />
+            <!-- add a way to dissalow improbable age ranges -->
+          </div>
+
+          <div class="row">
+            <label class="col-sm-4" id="dropdown-label" for="dropdown">Which option best describes your current role?: </label>
+            <select class="col-sm-4" id="dropdown" name="dropdown"/>
+              <option value="student">Student</option>
+              <option value="full-time-job">Full Time Job</option>
+              <option value="full-time-learner">Full Time Learner</option>
+              <option value="prefer-not-to-say">Prefer not to say</option>
+              <option value="other">Other</option>
+              <option value="none" selected>--Please choose an option--</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <p class="col-sm-4">How likely is that you would recommend freeCodeCamp to a friend?</p>
+            <div class="col-sm-4">
+              <input type="radio" id="recommend1"
+                     name="recommend" value="Definitely">
+              <label for="recommend1">Definitely</label>
+              <input type="radio" id="recommend2"
+                     name="recommend" value="Maybe">
+              <label for="recommend2">Maybe</label>
+              <input type="radio" id="recommend3"
+                     name="recommend" value="Not Sure">
+              <label for="recommend13">Not Sure</label>
+            </div>
+          </div>
+
+            <fieldset class="row">
+              <p class="col-sm-4">Things that should be improved in the future (Check all that apply):</p>
+              <div class="col-sm-4">
+                <div>
+                  <input type="checkbox" id="front-end-projects" name="improve" value="front-end-projects">
+                  <label for="front-end-projects">Front-end Projects</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="back-end-projects" name="improve" value="back-end-projects">
+                  <label for="back-end-projects">Back-end Projects</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="data-visualization" name="improve" value="data-visualization">
+                  <label for="data-visualization">Data Visualization</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="challenges" name="improve" value="challenges">
+                  <label for="Challenges">Challenges</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="open-source-community" name="improve" value="open-source-community">
+                  <label for="open-source-community">Open Source Community</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="videos" name="improve" value="videos">
+                  <label for="videos">Videos</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="city-meetups" name="improve" value="city-meetups">
+                  <label for="city-meetups">City Meetups</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="wiki" name="improve" value="wiki">
+                  <label for="wiki">Wiki</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="forum" name="improve" value="forum">
+                  <label for="forum">Forum</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="additional-courses" name="improve" value="additional-courses">
+                  <label for="additional-courses">Additional Courses</label>
+                </div>
+              </div>
+            </fieldset>
+            <div class="row">
+              <label class="col-sm-4" for="comments">Any Comments or Suggestions?</label>
+              <textarea class="col-sm-4" id="comments" name="comments">
+              </textarea>
+            </div>
+            <div class="text-center">
+              <input class="btn btn-primary btn-lg" id="submit" type="submit" class="submit" value="Submit" />
+            </div>
+          </div>
+        </form>
 
 
 
+      </div>
     </div>
-
   </body>
 </html>
